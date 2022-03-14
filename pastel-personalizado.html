@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pasteles</title>
+	<link href="https://www.dafont.com/es/adeline-2.font" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	<section class="background">
+		<ul class="menu-izq nav-bar-text">
+			<li><a href="#">Pasteles</a></li>
+			<li><a href="#">Adornos</a></li>
+		</ul>
+		<ul class="ul-logo">
+			<li><a href="index.html"><img class="logo" src="pics/logof.png" width="75" height="72"></a></li>
+		</ul>
+		<ul class="menu-der nav-bar-text">
+			<li><a href="#">Acerca</a></li>
+			<li><a href="#">Sign in</a></li>
+		</ul>
+		<h1 class="titulo">Pasteles personalizados</h1>
+		<section class="formulario">
+			<form name="form1" action="">
+                <label for="nombre">Nombre completo</label><br>
+                <input type="text" name="nombre" id="nombre" size="60px"><br>
+                <label for="cel">Celular</label><br>
+                <input type="phone" name="cel" id="cel" size="60px"><br>
+                <label for="correo">Correo electrónico</label><br>
+                <input type="email" name="correo" id="correo" size="60px"><br>
+                <br><br>
+                <label for="">Seleccione sus sabores <span>(Max. 4)</span></label>
+                <div class="pasteles-sabores">
+                    <input type="checkbox" id="chocolate" value="0" name="checkBoxOptions" class="checkbox-styles" onclick="checkBoxMax(0)">
+                    <label for="chocolate" >Chocolate</label>
+                    <input type="checkbox" id="durazno" value="1" name="checkBoxOptions" class="checkbox-styles" onclick="checkBoxMax(1)">
+                    <label for="durazno">Durazno</label>
+                    <input type="checkbox" id="zarzamora" value="2" name="checkBoxOptions" class="checkbox-styles" onclick="checkBoxMax(2)">
+                    <label for="zarzamora">Zarzamora</label>
+                    <input type="checkbox" id="moca" value="3" name="checkBoxOptions" class="checkbox-styles" onclick="checkBoxMax(3)">
+                    <label for="moca">Moca</label>
+                    <input type="checkbox" id="capuchino" value="4" name="checkBoxOptions" class="checkbox-styles" onclick="checkBoxMax(4)">
+                    <label for="capuchino">Capuchino</label>
+                    <input type="checkbox" id="redVelvet" value="5" name="checkBoxOptions" class="checkbox-styles" onclick="checkBoxMax(5)">
+                    <label for="redVelvet">Red Velvet</label>
+                    <input type="checkbox" id="napolitano" value="6" name="checkBoxOptions" class="checkbox-styles" onclick="checkBoxMax(6)">
+                    <label for="napolitano">Napolitano</label>
+                </div>
+            </form>
+                <br><br>
+            <form name="form2" action="">
+                <label for="">Seleccione sus decoraciones <span>(Max. 4)</span></label>
+                <div class="pasteles-sabores">
+                    <input type="checkbox" id="Blueberries" value="0" name="checkBoxOptions2" class="checkbox-styles" onclick="checkBoxMax2(0)">
+                    <label for="Blueberries" >Blueberries</label>
+                    <input type="checkbox" id="Fresas" value="1" name="checkBoxOptions2" class="checkbox-styles" onclick="checkBoxMax2(1)">
+                    <label for="Fresas">Fresas</label>
+                    <input type="checkbox" id="Chocolate" value="2" name="checkBoxOptions2" class="checkbox-styles" onclick="checkBoxMax2(2)">
+                    <label for="Chocolate">Chocolate</label>
+                    <input type="checkbox" id="MixFrutal" value="3" name="checkBoxOptions2" class="checkbox-styles" onclick="checkBoxMax2(3)">
+                    <label for="MixFrutal">Mix frutal</label>
+                    <input type="checkbox" id="Chispitas" value="4" name="checkBoxOptions2" class="checkbox-styles" onclick="checkBoxMax2(4)">
+                    <label for="Chispitas">Chispitas</label>
+                    <input type="checkbox" id="Durazno"0 value="5" name="checkBoxOptions2" class="checkbox-styles" onclick="checkBoxMax2(5)">
+                    <label for="Durazno">Durazno</label>
+                    <input type="checkbox" id="Mazapán" value="6" name="checkBoxOptions2" class="checkbox-styles" onclick="checkBoxMax2(6)">
+                    <label for="Mazapán">Mazapán</label>
+                </div>
+                <br><br>
+                <label for="">Descripción específica de su orden</label>
+                <br><br>
+                <textarea name="descripcion" id="descripcion" cols="54" rows="10" class="desc"></textarea>
+                <button class="ordenarFinal">Ordenar</button>
+            </form>
+		</section>
+  </section> 
+  <script>
+
+     function checkBoxMax2(j){
+        total=0;
+          for(i=0;i<document.form2.checkBoxOptions2.length; i++){
+              if(document.form2.checkBoxOptions2[i].checked)
+                total=total+1;
+          }
+          if(total>4){
+              alert("Recuerde solo seleccionar máximo 4 adornos")
+              document.form2.checkBoxOptions2[j].checked=false;
+          }
+      }
+
+      function checkBoxMax(j){
+        total=0;
+          for(i=0;i<document.form1.checkBoxOptions.length; i++){
+              if(document.form1.checkBoxOptions[i].checked)
+                total=total+1;
+          }
+          if(total>4){
+              alert("Recuerde solo seleccionar máximo 4 sabores de pasteles")
+              document.form1.checkBoxOptions[j].checked=false;
+          }
+      }
+  </script>
+</body>
+</html>

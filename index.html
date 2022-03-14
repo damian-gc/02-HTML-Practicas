@@ -12,37 +12,37 @@
 		<section class="one sect">
 			<div class="background-image">
 				<ul class="menu-izq nav-bar-text">
-					<li><a href="#">Pasteles</a></li>
-					<li><a href="#">Adornos</a></li>
+					<li><a href="#pasteles">Pasteles</a></li>
+					<li><a href="#adornos">Adornos</a></li>
 				</ul>
 				<ul class="ul-logo">
 					<li><a href="#"><img class="logo" src="pics/logof.png" width="75" height="72"></a></li>
 				</ul>
 				<ul class="menu-der nav-bar-text">
-					<li><a href="#">Acerca</a></li>
+					<li><a href="about.html">Acerca</a></li>
 					<li><a href="#">Sign in</a></li>
 				</ul>
 			
 				<h1 class="slogan">La experiencia del sabor <br>comienza aquí</h1>
 				<section class="botonesImagen">
 					<div class="effecto-boton-izq">
-						<button class="botones btn1">Ver menú</button>
+						<button class="botones btn1" id="btnMenu">Ver menú</button>
 					</div>
 					<img class="panque" src="pics/PASTELITO.png" width="704" height="751">
 					<div class="effecto-boton-der">
-						<button class="botones btn2">Ordenar</button>
+						<button class="botones btn2" href="#pasteles" id="btnOrden">Ordenar</button>
 					</div>
 				</section>
 				</div>
 		</section>
-		<section class="two sect">
+		<section class="two sect" id="pasteles">
 			<div class="contenedorBotones">
 				<button class="botones-menu" id="buttonPastelEsp">Pasteles especiales</button>
 				<button class="botones-menu" id="buttonPastelCla">Pasteles clásicos</button>
 				<button class="botones-menu" id="buttonPastelPer">Personalizados</button>
 			</div>
 		</section>
-		<section class="three sect">
+		<section class="three sect" id="adornos">
 			<h1>Decoraciones</h1>
 			<div class="toppings-container">
 				<div class="decoracion">
@@ -139,8 +139,11 @@
 		document.getElementById("buttonPastelCla").onclick = function(){
 		location.href = "pasteles-clasicos.html";}
 		document.getElementById("buttonPastelPer").onclick = function(){
-		location.href = "pastel-personalizado.html";
-		}
+		location.href = "pastel-personalizado.html";}
+		document.getElementById("btnMenu").onclick = function(){
+		location.href = "#pasteles";}
+		document.getElementById("btnOrden").onclick = function(){
+		location.href = "pastel-personalizado.html";}
 	</script>
 </body>
 </html>
